@@ -1,0 +1,27 @@
+$paddingHeight: 2vh;
+$paddingSide: 4vw;
+$contentPadding: $paddingHeight $paddingSide ;
+$defaultBackgroundColor: #ffffff;
+$black: #3A3A3C;
+$black2: #1C1C1C;
+$white: #ffffff;
+$primary : #21407e;
+$secondary: #9A1725;
+$gradient1:linear-gradient(92.91deg, rgba(248, 147, 29, 0.26) 3.38%, rgba(154, 23, 37, 0.17) 98.48%);
+$getAppColor: #F8931D;
+$getAppColorBG: #fffaed;
+$heroBackgroundColor: linear-gradient(92.91deg, rgba(248, 147, 29, 0.26) 3.38%, rgba(154, 23, 37, 0.17) 98.48%);
+;
+$fontFamily: "Poppins", sans-serif;
+$defaultFontSize: 16px;
+$headerHeight: 75px;
+$footerColor: #A4A4A4;
+$anchorMargin: 1.5vw;
+$smallMargin: 0.5vw;
+$smallpadding: 4px;
+$borderRadius: 10px;
+// MEDIA QUERIES
+$android: "540px";
+$tablet: "768px";
+$laptop: "1024px";
+$maxScreen: 1560px;
