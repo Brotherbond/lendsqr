@@ -1,16 +1,25 @@
 import type { NextPage } from 'next'
 import Default from '@/layouts/Auth'
-import routes from '@/util/routes'
-import Link from 'next/link'
+import Image from 'next/image'
+import LoginUser from '@/images/login_user.svg'
 
 const Login: NextPage = () => {
   return (
     <Default title="Login">
       <>
-
+        <Image src={LoginUser} width={500} alt={"Login user"} />
       </>
 
-    </Default>
+      <>
+        <h2>Welcome</h2>
+        <p>Enter details to login.</p>
+        <input type="email" name="" id="" placeholder='Email' />
+        <input type="password" name="" id="" placeholder='Password' />
+        <div>FORGOT PASSWORD?</div>
+        <div><button type="submit" className='w100 button'>LOG IN</button></div>
+      </>
+
+    </Default >
 
   )
 }

@@ -10,14 +10,14 @@ const Auth = ({ title, children }: DefaultProps): JSX.Element => {
         <HTMLHead title={title} />
         <DefaultHeader />
         <main>
-            <section>
+            <section className='flex_r'>
+                <div className='flex'>
+                    {Children.toArray(children)[0]}
+                </div>
                 <div>
                     <form action="" method="post">
-                        {Children.toArray(children)[0]}
-                    </form>
-                    <div>
                         {Children.toArray(children)[1]}
-                    </div>
+                    </form>
                 </div>
             </section>
         </main>
