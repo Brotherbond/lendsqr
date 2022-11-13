@@ -3,6 +3,7 @@ const routes = {
     //Authentication
     signup: "/auth/signup", //Auth first reaches signup before proceeding further
     login: "/auth/login",
+    forgotPass: "/auth/forgot-password",
     //dasboard
     dashboardOverview: "/dashboard",
     api: {

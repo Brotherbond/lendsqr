@@ -16,7 +16,7 @@ const Auth = ({ title, children }: DefaultProps): JSX.Element => {
                     {Children.toArray(children)[0]}
                 </div>
                 <div className={`${styles.form}  `}>
-                    <form className='' action="" method="post">
+                    <form action="" method="post">
                         {Children.toArray(children)[1]}
                     </form>
                 </div>
