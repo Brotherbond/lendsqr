@@ -1,0 +1,25 @@
+@use "../globalDefaults" as *;
+
+.header {
+  @include flex($justify: space-between);
+  position: fixed;
+  top: 0;
+  max-height: $headerHeight;
+  padding: $paddingSide;
+}
+
+.footer {
+  a {
+    img {
+      width: 25px;
+    }
+  }
+}
+
+.sideBar{
+  width: 100%;
+  max-width: $android;
+  @include media{
+    max-width:286px;
+  }
+}
