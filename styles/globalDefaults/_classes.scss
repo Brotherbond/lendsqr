@@ -1,25 +1,25 @@
-.black {
-  color: $black !important;
+.black1 {
+  color: $black1  !important;
 }
 
-.black_bg {
-  background-color: $black !important;
+.black1_bg {
+  background-color: $black1  !important;
 }
 
 .black2 {
-  color: $black2 !important;
+  color: $black2  !important;
 }
 
 .black2_bg {
-  background-color: $black2 !important;
+  background-color: $black2  !important;
 }
 
 .white {
-  color: $white !important;
+  color: $white  !important;
 }
 
 .white_bg {
-  background-color: $white !important;
+  background-color: $white  !important;
 }
 
 .primary {
@@ -74,12 +74,12 @@
   vertical-align: middle;
   transition: all 0.3s ease-in-out;
   padding: $smallpadding;
+  min-width: 30px;
+  min-height: 30px;
 }
 
 .linkButton {
   @extend .button;
-  min-width: 30px;
-  min-height: 30px;
   max-height: 70px;
 
   &:hover {
@@ -87,58 +87,12 @@
   }
 }
 
-.secondaryButton {
-  width: 50vw;
-  align-self: flex-start;
-
-  @include media($tablet) {
-    align-self: center;
-    width: 24vw;
-  }
-
-  @include media {
-    width: 18vw;
-  }
-}
-
-.mover {
-  animation: mover 1s infinite alternate;
-}
-
-@keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(5px);
-  }
-}
 
 .flex {
   @include flex(column);
-  max-width: 100%;
-  overflow: hidden;
 
-  img {
-    max-width: 80%;
-  }
-
-  button {
-    font-size: 3vw;
-
-    &:first-child:hover {
-      background-color: #1ba33c;
-      opacity: 1;
-    }
-  }
-
-  >div {
-    margin-top: 5vh;
-  }
-
-  $column: & + _c;
-  $row: & + _r;
+  $column: &+_c;
+  $row: &+_r;
 
   @at-root #{$column} {
     @include flex(column);
@@ -182,10 +136,6 @@
 
   @include media {
     flex-direction: row;
-
-    img {
-      width: 50%;
-    }
   }
 }
 
@@ -311,38 +261,5 @@
 
       font-weight: $fw;
     }
-  }
-}
-
-.back-to-top {
-  height: 36px;
-  width: 36px;
-  bottom: 50px;
-  right: 30px;
-  padding: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  position: fixed;
-  color: #fff;
-  background-color: #2f55d4;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 8px;
-  transition: all 0.5s ease;
-
-  &:hover {
-    transform: rotate(45deg);
-    background-color: #0b5ed7 !important;
-
-    border-color: #0a58ca;
-
-    svg {
-      transform: rotate(-45deg);
-    }
-  }
-
-  svg {
-    transition: all 0.5s ease;
   }
 }

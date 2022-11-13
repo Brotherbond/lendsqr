@@ -23,7 +23,7 @@
 :root {
   font: {
     family: $fontFamily;
-    weight: 500;
+    weight: 400;
     style: normal;
   }
 }
@@ -35,16 +35,17 @@ html {
 
 body {
   background-color: $white;
-  color: $black;
+  color: $black1;
   background-position: center;
   width: 100%;
 }
-footer *{
+
+footer * {
   color: $white ;
 }
 
 ::selection {
-  color: #F8931D;
+  color: $secondary;
   background: linear-gradient(92.91deg, rgba(248, 147, 29, 0.26) 3.38%, rgba(154, 23, 37, 0.17) 98.48%);
   ;
 }
@@ -71,7 +72,6 @@ a {
 
 button {
   @extend a;
-  @extend .linkButton;
   background-color: $secondary;
   color: $white;
   line-height: 1.71;
@@ -202,14 +202,6 @@ h4 {
 //   @include media($laptop) {
 //     font-size: 1.25vw;
 //   }
-// }
-
-// hr {
-//   width: 100%;
-//   height: 0.1vh;
-//   min-height: 1px;
-//   margin: 2vh 0;
-//   background-color: gray;
 // }
 
 
