@@ -83,26 +83,18 @@ button {
 //   -ms-interpolation-mode: bicubic;
 // }
 
-// h1 {
-//   font: {
-//     size: 32px;
-//     weight: 900;
-//   }
+h1 {
+  font: {
+    size: 32px;
+    weight: 700;
+  }
 
-//   @include margin();
+  @include margin();
+  @include media {
+    font-size: 40px;
+  }
 
-//   @include media(540px) {
-//     font-size: 7.5vw;
-//   }
-
-//   @include media {
-//     font-size: 50px;
-//   }
-
-//   @include media($laptop) {
-//     font-size: 72px;
-//   }
-// }
+}
 
 h2 {
   font: {
@@ -110,7 +102,7 @@ h2 {
     weight: 600;
   }
 
-  @include margin();
+  // @include margin();
   margin-top: 0;
 
   @include media(540px) {

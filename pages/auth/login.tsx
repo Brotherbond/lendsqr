@@ -11,7 +11,7 @@ const Login: NextPage = () => {
       </>
 
       <>
-        <h2>Welcome</h2>
+        <h1>Welcome</h1>
         <p>Enter details to login.</p>
         <input type="email" name="" id="" placeholder='Email' />
         <input type="password" name="" id="" placeholder='Password' />

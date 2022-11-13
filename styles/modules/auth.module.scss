@@ -1,0 +1,22 @@
+@use "../globalDefaults" as *;
+
+.auth {
+  padding: $contentPadding;
+  @include flex() {
+    @include media() {
+      @include flex(row, space-between, center);
+    }
+  }
+
+  ;
+  min-height: 100vh;
+
+  div:first-child {
+    // background-color: #1E1E1E;
+  }
+
+  .form {
+    @include flex();
+
+  }
+}
