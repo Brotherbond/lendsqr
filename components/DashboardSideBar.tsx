@@ -20,7 +20,7 @@ const DashboardSideBar = (): JSX.Element => {
                                     {category.children.map((item) => (
                                         <li key={item.title}>
                                             <Link href={item.link}>
-                                                <div className="flex_r"><Image src={item.img} width={15} height={15} alt={item.title} /> </div>
+                                                <div className="flex_r"><Image src={item.img} width={15} height={15} alt={item.title} />{item.title}</div>
                                             </Link>
                                         </li>
                                     ))}
