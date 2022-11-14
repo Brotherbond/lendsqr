@@ -1,25 +1,33 @@
 .black1 {
-  color: $black1  !important;
+  color: $black1 !important;
 }
 
 .black1_bg {
-  background-color: $black1  !important;
+  background-color: $black1 !important;
 }
 
 .black2 {
-  color: $black2  !important;
+  color: $black2 !important;
 }
 
 .black2_bg {
-  background-color: $black2  !important;
+  background-color: $black2 !important;
 }
 
 .white {
-  color: $white  !important;
+  color: $white !important;
 }
 
 .white_bg {
-  background-color: $white  !important;
+  background-color: $white !important;
+}
+
+.grey {
+  color: $grey !important;
+}
+
+.grey_bg {
+  background-color: $grey !important;
 }
 
 .primary {
@@ -193,6 +201,25 @@
 
 .rotate {
   transform: rotate(180deg);
+}
+
+.h {
+  $heights: 25,
+  50,
+  75,
+  100;
+
+  @each $height in $heights {
+    @at-root &#{$height} {
+      height: $height +#{"%"};
+    }
+  }
+
+  @at-root &#{100v} {
+    height: 100vh;
+  }
+
+
 }
 
 .w {

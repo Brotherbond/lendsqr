@@ -7,9 +7,9 @@ import DashboardSideBar from '@/components/DashboardSideBar'
 const Dashboard = ({ title, children }: DefaultProps): JSX.Element => {
     return <>
         <HTMLHead title={title} />
-        <main>
+        <main className='grey_bg h100v'>
             <DefaultHeader />
-            <section className='flex_r'>
+            <section className=''>
                 <DashboardSideBar />
                 {children}
             </section>
