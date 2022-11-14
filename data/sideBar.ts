@@ -1,3 +1,25 @@
+import Users from '@/images/users.svg'
+import Guarantors from '@/images/guarantors.svg'
+import Loans from '@/images/loans.svg'
+import DecisionModels from '@/images/decision_models.svg'
+import Savings from '@/images/savings.svg'
+import ServiceAccount from '@/images/service_account.svg'
+import Whitelist from '@/images/whitelist.svg'
+import Karma from '@/images/karma.svg'
+import Organization from '@/images/organization.svg'
+import LoanProducts from '@/images/loan_requests.svg'
+import LoanRequests from '@/images/loan_requests.svg'
+import SavingsProducts from '@/images/savings_products.svg'
+import FeesAndCharges from '@/images/fees_and_charges.svg'
+import Transactions from '@/images/transactions.svg'
+import Services from '@/images/services.svg'
+import FeesAndPricing from '@/images/fees_and_pricing.svg'
+import AuditLogs from '@/images/audit_logs.svg'
+import Preferences from '@/images/preferences.svg'
+import Reports from '@/images/reports.svg'
+import Settlements from '@/images/settlements.svg'
+
+
 const sideBarElements = [
     {
         category_id: "1",
@@ -5,42 +27,42 @@ const sideBarElements = [
         children: [
             {
                 title: "Users",
-                img: "user",
+                img: Users,
                 link: "user"
             },
             {
                 title: "Guarantors",
-                img: "guarantors",
+                img: Guarantors,
                 link: "guarantors"
             },
             {
                 title: "Loans",
-                img: "loans",
+                img: Loans,
                 link: "loans"
             },
             {
                 title: "Decision Models",
-                img: "decision_models",
+                img: DecisionModels,
                 link: "decision-models"
             },
             {
                 title: "Savings",
-                img: "savings",
+                img: Savings,
                 link: "savings"
             },
             {
                 title: "Loan Requests",
-                img: "loan_requests",
+                img: LoanRequests,
                 link: "loan-requests"
             },
             {
                 title: "Whitelist",
-                img: "whitelist",
+                img: Whitelist,
                 link: "whitelist"
             },
             {
                 title: "Karma",
-                img: "karma",
+                img: Karma,
                 link: "karma"
             },
         ]
@@ -51,47 +73,47 @@ const sideBarElements = [
         children: [
             {
                 title: "Organization",
-                img: "organization",
+                img: Organization,
                 link: "organization"
             },
             {
                 title: "Loan Products",
-                img: "loan_products",
-                link: "loan-products"
+                img: LoanProducts,
+                link: "loan_products"
             },
             {
                 title: "Savings Products",
-                img: "savings_products",
-                link: "savings-products"
+                img: SavingsProducts,
+                link: "savings_products"
             },
             {
                 title: "Fees and Charges",
-                img: "fees_and_charges",
-                link: "fees-and-charges"
+                img: FeesAndCharges,
+                link: "fees_and_charges"
             },
             {
                 title: "Transactions",
-                img: "transactions",
+                img: Transactions,
                 link: "transactions"
             },
             {
                 title: "Services",
-                img: "services",
+                img: Services,
                 link: "services"
             },
             {
                 title: "Service Account",
-                img: "",
-                link: "service-account"
+                img: ServiceAccount,
+                link: "service_account"
             },
             {
                 title: "Settlements",
-                img: "",
+                img:Settlements,
                 link: "settlements"
             },
             {
                 title: "Reports",
-                img: "",
+                img: Reports,
                 link: "reports"
             }
         ]
@@ -102,18 +124,18 @@ const sideBarElements = [
         children: [
             {
                 title: "Preferences",
-                img: "",
+                img: Preferences,
                 link: "preferences"
             },
             {
                 title: "Fees and Pricing",
-                img: "fees_and_pricing",
-                link: "fees-and-pricing"
+                img: FeesAndPricing,
+                link: "fees_and_pricing"
             },
             {
                 title: "Audit Logs",
-                img: "audit_logs",
-                link: "audit-logs"
+                img: AuditLogs,
+                link: "audit_logs"
             },
         ]
     }
