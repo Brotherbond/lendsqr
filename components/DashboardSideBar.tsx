@@ -21,6 +21,7 @@ const ActiveLink = ({
     const childClassName = children.props.className ?? ""
     const newClassName = `${childClassName} ${activeClassName ?? ""}`
     const className = asPath === rest.href ? newClassName.trim() : ""
+    console.log(className)
 
     return <Link {...rest}>{cloneElement(children, { className })}</Link>
 }
@@ -36,10 +37,10 @@ const DashboardSideBar = (): JSX.Element => {
                                 <div>{category.name}</div>
                                 <ul className=''>
                                     {category.children.map((item) => (
-                                        <li key={item.title} className={`${location.pathname.match(item.link) ? styles.active : ""}`}>
-                                            <Link href={`${item.link}`}>
-                                                <div className={`${styles.item}`}><Image src={item.img} width={15} height={15} alt={item.title} />{item.title}</div>
-                                            </Link>
+                                        <li key={item.title} className={`${styles.item}`}>
+                                            <ActiveLink activeClassName={`${styles.active}`} href={`${item.link}`}>
+                                                <div className={`${styles.active}`} ><Image src={item.img} width={15} height={15} alt={item.title} />{item.title}</div>
+                                            </ActiveLink>
                                         </li>
                                     ))}
                                 </ul>

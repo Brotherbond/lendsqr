@@ -28,7 +28,7 @@ const sideBarElements = [
             {
                 title: "Users",
                 img: Users,
-                link: "user"
+                link: "users"
             },
             {
                 title: "Guarantors",
