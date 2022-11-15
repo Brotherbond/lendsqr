@@ -1,26 +1,44 @@
 import { MouseEvent, useEffect, useState } from "react";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link"
 import Image from "next/image";
 import routes from "@/util/routes";
 import sideBarElements from "@/data/sideBar";
 import styles from '@/styles/modules/dashboardLayout.module.scss';
+import { cloneElement, ReactElement } from "react"
+import { useRouter } from "next/router"
 
+type ActiveLinkProps = LinkProps & {
+    children: ReactElement
+    activeClassName: string
+}
 
+const ActiveLink = ({
+    children,
+    activeClassName,
+    ...rest
+}: ActiveLinkProps) => {
+    const { asPath } = useRouter()
+    const childClassName = children.props.className ?? ""
+    const newClassName = `${childClassName} ${activeClassName ?? ""}`
+    const className = asPath === rest.href ? newClassName.trim() : ""
+
+    return <Link {...rest}>{cloneElement(children, { className })}</Link>
+}
 const DashboardSideBar = (): JSX.Element => {
 
     return (
         <>
             <div className={`${styles.sideBar}`}>  <aside className=''>
                 <nav>
-                    <ul>
+                    <ul className={`${styles.categories}`}>
                         {sideBarElements.map((category) => (
                             <li className='' key={category.name}>
                                 <div>{category.name}</div>
                                 <ul className=''>
                                     {category.children.map((item) => (
-                                        <li key={item.title}>
-                                            <Link href={item.link}>
-                                                <div className="flex_r"><Image src={item.img} width={15} height={15} alt={item.title} />{item.title}</div>
+                                        <li key={item.title} className={`${location.pathname.match(item.link) ? styles.active : ""}`}>
+                                            <Link href={`${item.link}`}>
+                                                <div className={`${styles.item}`}><Image src={item.img} width={15} height={15} alt={item.title} />{item.title}</div>
                                             </Link>
                                         </li>
                                     ))}

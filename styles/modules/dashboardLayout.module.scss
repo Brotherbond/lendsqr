@@ -1,25 +1,39 @@
 @use "../globalDefaults" as *;
 
-.header {
+.sideBar {
   @include flex($justify: space-between);
   position: fixed;
+  z-index: -2000;
+  background-color: red;
   top: 0;
-  max-height: $headerHeight;
-  padding: $paddingSide;
-}
-
-.footer {
-  a {
-    img {
-      width: 25px;
-    }
-  }
-}
-
-.sideBar{
+  min-height: 100vh;
   width: 100%;
   max-width: $android;
-  @include media{
-    max-width:286px;
+
+  @include media {
+    // max-width: $sideBarWidth;
+  }
+.active{
+  background-color: $secondary;
+}
+  .categories {
+    >li {
+      margin-top: $smallMargin*4;
+
+      >div {
+        padding: 0 $paddingSide;
+
+      }
+
+      .item {
+        padding: 0 $paddingSide;
+
+        img {
+          padding-right: $smallpadding;
+        }
+
+        margin-bottom: $smallpadding *3;
+      }
+    }
   }
 }

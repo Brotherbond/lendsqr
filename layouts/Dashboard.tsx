@@ -9,7 +9,7 @@ const Dashboard = ({ title, children }: DefaultProps): JSX.Element => {
         <HTMLHead title={title} />
         <main>
             <DefaultHeader />
-            <section className='flex_r'>
+            <section className=''>
                 <DashboardSideBar />
                 {children}
             </section>
